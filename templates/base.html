@@ -23,8 +23,9 @@
                         <h3>最新文章</h3>
                     </div>
                     <div class="panel-body">
+
                         <div class="list-group">
-                            <a href="" class="list-group-item">{{ post.title }}</a>
+                            <a href="" class="list-group-item">{% block sidemessage %}{% endblock %}</a>
                         </div>
                     </div>
 
@@ -34,13 +35,14 @@
             <div class="col-md-8 col-sm-8">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-
+                        <h3>{% block headmessagetitle %}{% endblock %}</h3>
+                        <h5>{% block headmessageauther %}{% endblock %}</h5>
                     </div>
                     <div class="panel-body">
-
+                        <p>{% block content %}{% endblock %}</p>
                     </div>
                     <div class="panel-footer">
-
+                        {% include 'footer.html' %}
                     </div>
                 </div>
 
@@ -54,7 +56,7 @@
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    {% include 'footer.html' %}
+
 
 </body>
 </html>

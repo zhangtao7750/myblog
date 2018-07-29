@@ -23,7 +23,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="res-nav">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index_flightbasic.html">飞行基础</a></li>
+                        <li class="active"><a href="flightbasic">飞行基础</a></li>
                         <li class="active"><a href="index_B737.html">B737</a></li>
                         <li class="active"><a href="index_operation.html">运行</a></li>
                         <li class="active"><a href="index_hobby.html">兴趣爱好</a></li>
@@ -63,7 +63,7 @@
                         <h3>最新文章</h3>
                     </div>
                     <div class="panel-body">
-                        {% for post in posts %}
+                        {% for post in posts_fight %}
                         <div class="list-group">
                             <a href="" class="list-group-item">{{ post.title }}</a>
                         </div>
