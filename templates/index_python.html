@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width user-scalable=no initial-scale=1.0 maximum-scale=1.0 minmum-scale=1.0">
-    <title>synairtech</title>
+    <title>synairtech--PYTHON&AI</title>
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/bootstrap/css/style.css">
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -19,15 +19,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#" class="navbar-brand"><strong>synairtech</strong></a>
+                    <a href="http://www.synairtech.com" class="navbar-brand"><strong>synairtech</strong></a>
                 </div>
                 <div class="collapse navbar-collapse" id="res-nav">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index_flightbasic.html">飞行基础</a></li>
-                        <li class="active"><a href="index_B737.html">B737</a></li>
-                        <li class="active"><a href="index_python.html">运行</a></li>
-                        <li class="active"><a href="index_redwine.html">兴趣爱好</a></li>
-                        <li class="active"><a href="">联系方式</a></li>
+                        <li class="active"><a href="http://www.synairtech.com/flight">飞行</a></li>
+                        <li class="active"><a href="http://www.synairtech.com/b737">B737</a></li>
+                        <li class="active"><a href="http://www.synairtech.com/python">PYTHON&AI</a></li>
+                        <li class="active"><a href="http://www.synairtech.com/redwine">红酒</a></li>
                     </ul>
                     <form action="" class="navbar-form navbar-left" >
                         <input type="text" placeholder="请输入搜索内容" class="form-control">
@@ -52,6 +51,10 @@
 
             </div>
         </nav>
+
+
+
+    <div class="container">
         <div class="row">
             <div class="col-md-4 col-sm-4">
                 <div class="panel panel-default">
@@ -59,9 +62,11 @@
                         <h3>最新文章</h3>
                     </div>
                     <div class="panel-body">
+                        {% for post in posts %}
                         <div class="list-group">
                             <a href="" class="list-group-item">{{ post.title }}</a>
                         </div>
+                        {% endfor %}
                     </div>
 
                 </div>
@@ -69,13 +74,18 @@
             </div>
             <div class="col-md-8 col-sm-8">
                 <div class="panel panel-default">
+                    {% for post in posts %}
                     <div class="panel-heading">
+                        <h3>{{ post.title }}</h3><h5>{{ post.title_auther }}</h5>
 
                     </div>
                     <div class="panel-body">
+                    <p>{{ post.title_body }}</p>
 
                     </div>
+                    {% endfor %}
                     <div class="panel-footer">
+                        {% include 'footer.html' %}
 
                     </div>
                 </div>
@@ -86,9 +96,7 @@
         </div>
 
 
-
-
-
+    </div>
 
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/jquery-3.3.1.min.js"></script>
