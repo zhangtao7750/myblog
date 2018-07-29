@@ -1,0 +1,14 @@
+<!--index-->
+{% extends 'base.html' %}
+{% block title %}synairtech--运行{% endblock %}
+{% block headmessage %}
+    {% for post in posts %}
+        <div>
+            <h3><a href="{{ post.title_web }}">{{ post.title }}</a></h3>
+            <ul>
+                <li>{{ post.title_auther }}</li>
+                <li>{{ post.title_date }}</li>
+            </ul>
+        </div>
+    {% endfor %}
+{% endblock %}
