@@ -16,5 +16,5 @@ def Index_Python(request):
     posts=Post.objects.filter(title_item='python')
     return render(request,'index_python.html',{"posts":posts})
 def Index_RedWine(request):
-    posts=Post.objects.filter(title_item='redwine')
+    posts=Post.objects.all()
     return render(request,'index_redwine.html',{"posts":posts})
