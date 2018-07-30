@@ -11,7 +11,7 @@ class Post(models.Model):
     title_auther=models.CharField(max_length=20)
     title_num=models.IntegerField()
     title_date=models.DateTimeField(default=timezone.now)
-    title_item=models.CharField(max_length=20, default='flight')
+    title_item=models.CharField(max_length=50)
 
 
     class Meta:
