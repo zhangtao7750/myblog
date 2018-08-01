@@ -13,41 +13,26 @@
 
 </head>
 <body>
-
-    <div class="container">
     {% include 'header.html' %}
+    <div class="container">
         <div class="row">
             <div class="col-md-4 col-sm-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3>最新文章</h3>
                     </div>
-                    <div class="panel-body">
-
-                        <div class="list-group">
-                            <a href="" class="list-group-item">{% block sidemessage %}{% endblock %}</a>
-                        </div>
-                    </div>
-
+                    {% block sidemessage %}{% endblock %}
                 </div>
 
             </div>
             <div class="col-md-8 col-sm-8">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3>{% block headmessagetitle %}{% endblock %}</h3>
-                        <h5>{% block headmessageauther %}{% endblock %}</h5>
-                    </div>
-                    <div class="panel-body">
-                        <p>{% block content %}{% endblock %}</p>
-                    </div>
-                    <div class="panel-footer">
-                        {% include 'footer.html' %}
-                    </div>
+                    {% block headmessage %}{% endblock %}
                 </div>
-
             </div>
-
+            <div class="panel-footer">
+                {% include 'footer.html' %}
+            </div>
 
         </div>
 

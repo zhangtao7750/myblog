@@ -15,13 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url,include
-from myapp.views import Homepage,Index_Flight,Index_B737,Index_Python,Index_RedWine
+from myapp.views import Homepage,Flight,B737,Python,RedWine,Sub_Redwine
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
     url(r'^$',Homepage),
-    url(r'^flight/$',Index_Flight),
-    url(r'^b737/$',Index_B737),
-    url(r'^python/$',Index_Python),
-    url(r'^redwine/$',Index_RedWine),
+    url(r'^flight/$',Flight),
+    url(r'^(\d{1,3})/$',Flight,name='url-flight'),
+    url(r'^b737/$',B737),
+    url(r'^(\d{1,3})/$',B737,name='url-b737'),
+    url(r'^python/$',Python),
+    url(r'^(\d{1,3})/$',Python,name='url-python'),
+    url(r'^redwine/$',RedWine),
+    url(r'^redwine/\d{1,3}/$',Sub_Redwine,name='url-redwine'),
+    url(r'^admin/', admin.site.urls),
 ]

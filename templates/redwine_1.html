@@ -1,22 +1,20 @@
-<!--home.html-->
+<!--redwine_1.html-->
 {% extends 'base.html' %}
-{% block title %}synairtech{% endblock %}
+{% for post in posts %}
+{% block title %}{{ post.title }}{% endblock %}
 {% block sidemessage %}
     <div class="panel-body">
-        {% for post in posts %}
             <div class="list-group">
                 <a href="" class="list-group-item">{{ post.title }}</a>
             </div>
-        {% endfor %}
     </div>
 {% endblock %}
 {% block headmessage %}
-    {% for post in posts %}
         <div class="panel-heading">
             <h3>{{ post.title }}</h3><h5>{{ post.title_auther }}</h5>
         </div>
         <div class="panel-body">
-            <p>{{ post.title_body | truncatechars:50}}</p>
+            <p>{{ post.title_body }}</p>
         </div>
-    {% endfor %}
 {% endblock %}
+{% endfor %}
