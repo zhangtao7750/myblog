@@ -18,7 +18,7 @@ from django.conf.urls import url,include
 from myapp.views import Homepage,Flight,B737,Python,RedWine
 
 urlpatterns = [
-    url(r'^$',Homepage),
+    url(r'^www.synairtech.com$',Homepage),
     url(r'^flight/$',Flight),
     url(r'^b737/$',B737),
     url(r'^python/$',Python),
