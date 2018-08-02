@@ -19,11 +19,7 @@ def Python(request):
 def RedWine(request):
     posts = Post.objects.filter(title_item='redwine')
     return render(request,'redwine.html',{"posts":posts})
-def Sub_Redwine(request):
-    posts=Post.objects.filter(title_item='redwine')
-    for post in posts:
-        redwine="redwine_"+post.title_num+".html"
-    return render(request,redwine,{"posts":posts})
+
 
 
 

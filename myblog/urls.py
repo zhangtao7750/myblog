@@ -15,17 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url,include
-from myapp.views import Homepage,Flight,B737,Python,RedWine,Sub_Redwine
+from myapp.views import Homepage,Flight,B737,Python,RedWine
 
 urlpatterns = [
     url(r'^$',Homepage),
     url(r'^flight/$',Flight),
-    url(r'^(\d{1,3})/$',Flight,name='url-flight'),
     url(r'^b737/$',B737),
-    url(r'^(\d{1,3})/$',B737,name='url-b737'),
     url(r'^python/$',Python),
-    url(r'^(\d{1,3})/$',Python,name='url-python'),
     url(r'^redwine/$',RedWine),
-    url(r'^redwine/\d{1,3}/$',Sub_Redwine,name='url-redwine'),
     url(r'^admin/', admin.site.urls),
 ]
