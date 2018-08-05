@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'myblog.wsgi.application'
 DATABASES = {
     'default': {
          'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mybox',
+        'NAME': 'myapp',
         'USER':'root',
         'PASSWORD':'Zt@6521033',
-        'HOST':'localhost',
+        'HOST':'207.246.75.109',
         'PORT':'3306',
     }
 }
@@ -123,6 +123,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+DEFAULT_CHARSET = 'utf-8'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
